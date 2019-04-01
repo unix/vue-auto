@@ -1,0 +1,23 @@
+{
+  "name": "vue-auto",
+  "version": 2,
+  "alias": "vue-auto.lambdas.dev",
+  "github": {
+    "silent": true
+  },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": ".*",
+      "dest": "./dist/index.html"
+    }
+  ]
+}

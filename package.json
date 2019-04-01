@@ -1,10 +1,13 @@
 {
   "name": "vue-auto",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "main": "index.js",
   "repository": "git@github.com:WittBulter/vue-auto.git",
   "author": "WittBulter <nanazuimeng123@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "now-build": "node docs.js"
+  },
   "files": [
     "index.js"
   ],
