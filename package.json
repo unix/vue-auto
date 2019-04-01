@@ -1,0 +1,14 @@
+{
+  "name": "vue-auto",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:WittBulter/vue-auto.git",
+  "author": "WittBulter <nanazuimeng123@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "vue": "^2.5.0"
+  }
+}

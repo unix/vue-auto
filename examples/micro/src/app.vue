@@ -1,12 +1,6 @@
 <template>
   <div id="app">
     <p>app.vue</p>
-    <div>
-    </div>
+    <auto-hello/>
   </div>
 </template>
-<script>
-export default {
-  name: 'app',
-}
-</script>
