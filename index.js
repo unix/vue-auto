@@ -42,7 +42,7 @@ const withRouters = (routers) => routers
     }
     r.component = instance
     if (r.children) {
-      r.children = routerMixin(r.children)
+      r.children = withRouters(r.children)
     }
     return r
   })
