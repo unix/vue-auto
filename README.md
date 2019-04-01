@@ -1,20 +1,35 @@
 # vue-auto
 > use Vue in a simpler way.
 
+`vue-auto` can help you inject all components automatically, It makes your project simpler, cleaner.
+
+<br/>
+
+### Features
+
+- No Import.
+
+- No `Vue.component`.
+
+- No `component.name`.
+
+- No `Router.component`.
+
+<br/>
 
 ### Usage
 
 1. install: `npm i vue-auto` or `yarn add vue-auto`.
 
-2. import to your `main.js`:
+2. create `components/` and `pages/` folder.
+
+3. import to your `main.js`:
 ```js
 import Vue from 'vue'
 import { install } from 'vue-auto'
 
 install(Vue)
 ```
-
-3. create `components/` and `pages/` folder.
 
 **Any component will be automatically injected into the global, you can also customize component prefixe.**
 
@@ -47,7 +62,9 @@ export default new Router({
 
 ### Examples
 
-- [more]()
+- [micro project]()
+
+- [with-router-project]()
 
 <br/>
 
