@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import app from './app.vue'
-import { install } from '../../../index'
+import { install } from 'vue-auto'
 
 install(Vue)
 new Vue({

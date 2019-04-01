@@ -6897,6 +6897,11 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-auto@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/vue-auto/-/vue-auto-0.0.1.tgz#c70cc76d98d80ad0e3e38edf02a931adb5cff128"
+  integrity sha512-94XXFD+gujJx3AhLurL100koe5u2XCBOpbZYG/GPfD3gK3/3YK/FwbqcpHro3MoNUC0jNYwOyToJNSqQP0OytQ==
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.3.tgz#2756f46cb3258054c5f4723de8ae7e87302a1ccf"
