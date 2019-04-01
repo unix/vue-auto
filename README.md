@@ -62,9 +62,9 @@ export default new Router({
 
 ### Examples
 
-- [micro project]()
+- [micro project](https://github.com/WittBulter/vue-auto/tree/master/examples/micro)
 
-- [with-router-project]()
+- [with-router-project](https://github.com/WittBulter/vue-auto/tree/master/examples/with-routers)
 
 <br/>
 
