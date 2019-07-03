@@ -24,14 +24,17 @@
 2. create `components/` and `pages/` folder.
 
 3. import to your `main.js`:
-```js
-import Vue from 'vue'
-import { install } from 'vue-auto'
 
-install(Vue)
-```
+  ```js
+  import Vue from 'vue'
+  import { install } from 'vue-auto'
+  
+  install(Vue)
+  ```
 
 **Any component will be automatically injected into the global, you can also customize component prefixe.**
+
+<br/>
 
 #### with router:
 
@@ -47,7 +50,6 @@ export default new Router({
     { path: '/about', name: 'about' },
   ])
 })
-
 ```
 
 <br/>
@@ -62,9 +64,9 @@ export default new Router({
 
 ### Examples
 
-- [micro project](https://github.com/WittBulter/vue-auto/tree/master/examples/micro)
+- [micro project](https://github.com/unix/vue-auto/tree/master/examples/micro)
 
-- [with-router-project](https://github.com/WittBulter/vue-auto/tree/master/examples/with-routers)
+- [with-router-project](https://github.com/unix/vue-auto/tree/master/examples/with-routers)
 
 <br/>
 
