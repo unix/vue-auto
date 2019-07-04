@@ -35,6 +35,8 @@ const pages = !notFoundPages ? getModules(pagesContext) : {}
 const withRouters = (routers) => routers
   .map(r => {
     if (r.component && (typeof r.component !== 'string')) return r
+    if (r.children) r.children = withRouters(r.children)
+    
     const name = r.name || r.component
     if (!name) return r
     
@@ -44,9 +46,7 @@ const withRouters = (routers) => routers
       console.error(`Router: No route matching ${r.name} was found.`)
     }
     r.component = instance
-    if (r.children) {
-      r.children = withRouters(r.children)
-    }
+    
     return r
   })
 
