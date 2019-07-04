@@ -35,7 +35,10 @@ const pages = !notFoundPages ? getModules(pagesContext) : {}
 const withRouters = (routers) => routers
   .map(r => {
     if (r.component && (typeof r.component !== 'string')) return r
-    const ident = (r.name || r.component).toLowerCase()
+    const name = r.name || r.component
+    if (!name) return r
+    
+    const ident = name.toLowerCase()
     const instance = pages.find(item => item.routerName === ident)
     if (!instance) {
       console.error(`Router: No route matching ${r.name} was found.`)
