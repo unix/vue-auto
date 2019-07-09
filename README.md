@@ -29,36 +29,44 @@
   import Vue from 'vue'
   import { install } from 'vue-auto'
   
-  install(Vue)
+  const router = install(Vue, { prefix: 'my' })
+  new Vue({
+    router,
+    render: h => h(app),
+  }).$mount('#app')
   ```
 
 **Any component will be automatically injected into the global, you can also customize component prefixe.**
 
 <br/>
 
-#### with router:
+### Guide
 
-```js
-import Vue from 'vue'
-import Router from 'vue-router'
-import { withRouters } from 'vue-auto'
-Vue.use(Router)
+> Please complete the init in step [Usage](#Usage) first.
 
-export default new Router({
-  routes: withRouters([
-    { path: '/', name: 'home' },
-    { path: '/about', name: 'about' },
-  ])
-})
-```
+  - Components: 
+    - use `my-{filename}` in anywhere. (e.g. use `my-menu` if the file is named `menu`)
+    - prefixe can be modified in `options.prefix`, default is `auto` 
+    - any component can refer to each other
 
+  - Routers:
+    - files under folder `pages` will automatically be routed
+    - get router `/about` when you create file `/pages/about.vue`
+    - get router `/posts/:id` when you create file `/posts/[id].vue`
+    - get router `/pages/first` when you create file `/posts/first.vue` (static routes take precedence over dynamic routes)
+  
 <br/>
 
 ### Options
 
-- `install: (vue: Vue, options: { prefix: string }) => void`
+Here are the `options` of `install(vue, options)`
 
-- `withRouter: (Array<VueRoute>) => Routers`
+| name | type | description | default | example |
+|---|---|---|---|---|
+| prefix | `string` | custom component prefix | `auto` | `my` |
+| autoRouter | `boolean` | auto inject router | `true` | - |
+| mode | `string` | h5 router mode | `history` | - |
+| base | `string` | router base | `process.env.BASE_URL` | - |
 
 <br/>
 
