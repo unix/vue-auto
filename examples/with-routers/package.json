@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "vue": "^2.6.6",
-    "vue-auto": "^0.3.2"
+    "vue-auto": "^0.3.2",
+    "vue-router": "^3.0.7"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
