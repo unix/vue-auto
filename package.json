@@ -1,18 +1,36 @@
 {
   "name": "vue-auto",
   "version": "0.2.5",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": "git@github.com:unix/vue-auto.git",
   "author": "unix <lambdas.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "lint": "xo",
     "now-build": "node docs.js"
   },
-  "files": [
-    "index.js"
+  "pre-commit": [
+    "lint"
   ],
+  "files": [
+    "src"
+  ],
+  "xo": {
+    "extends": [
+      "lambdas/vue"
+    ],
+    "ignore": [
+      "examples"
+    ]
+  },
   "peerDependencies": {
     "vue": "^2.5.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint-config-lambdas": "^0.2.5",
+    "pre-commit": "^1.2.2",
+    "xo": "^0.24.0"
+  }
 }
