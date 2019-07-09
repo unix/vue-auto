@@ -3,7 +3,7 @@ import * as util from './util'
 export const createComponents = (vue, components) => {
   components
     .forEach(com => {
-      if (!com.routerName.startsWith(util.getPrefix())) {
+      if (!com.routerName.startsWith(util.pagePrefix)) {
         com.routerName = `${util.getPrefix()}-${com.routerName}`
       }
       com.name = com.name || com.routerName
