@@ -17,6 +17,32 @@
 
 <br/>
 
+### Automation
+
+  - auto component:
+  
+    ```
+    // hello.vue
+    <template> <p>hello</p> <template>
+    
+    // anywhere
+    <auto-hello>
+    ```
+  
+  - auto router, 
+    create router `/home`:
+    ```
+    // pages/home.vue
+    <template> <p>home</p> <template>
+    ```
+    
+    create router `/posts/20`:
+    ```
+    // pages/posts/[id].vue
+    <template> <p>{{ $route.params.id }}</p> <template>
+    ```
+  It's easy.
+
 ### Usage
 
 1. install: `npm i vue-auto` or `yarn add vue-auto`.
