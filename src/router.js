@@ -59,5 +59,5 @@ const appendRouter = (path, routes, pages) => {
 
   const exist = routes.find(item => item.path === routerPath)
   if (exist) return routes
-  return routes.concat[makeRouter(path, routerPath, pages)]
+  return routes.concat([makeRouter(path, routerPath, pages)])
 }
