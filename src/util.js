@@ -8,6 +8,16 @@ export const setPrefix = (prefix = defaultPrefix) => {
   defaultPrefix = prefix
 }
 
+export const setDefaultOption = options => {
+  options.prefix = options.prefix || getPrefix()
+  options.mode = options.mode || 'history'
+  options.base = options.base || process.env.BASE_URL
+  if (options.autoRouter === undefined) {
+    options.autoRouter = true
+  }
+  return options
+}
+
 export const getComponentName = path => {
   return `${defaultPrefix}-${pathToParams(path).reverse()[0]}`.toLowerCase()
 }

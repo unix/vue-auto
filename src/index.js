@@ -37,7 +37,9 @@ const install = (vue, options = {
   base: process.env.BASE_URL,
   autoRouter: true,
 }) => {
+  options = util.setDefaultOption(options)
   util.setPrefix(options.prefix)
+  
   !notFoundComponents && component.createComponents(vue, components)
   !notFoundPages && component.createComponents(vue, pages)
 
