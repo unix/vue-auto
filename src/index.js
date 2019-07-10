@@ -39,7 +39,7 @@ const install = (vue, options = {
 }) => {
   options = util.setDefaultOption(options)
   util.setPrefix(options.prefix)
-  
+
   !notFoundComponents && component.createComponents(vue, components)
   !notFoundPages && component.createComponents(vue, pages)
 
