@@ -1,3 +1,4 @@
+import Router from 'vue-router'
 import * as util from './util'
 
 let pages = []
@@ -31,7 +32,6 @@ export const createRouter = (vue, pages, pageContexts, routerOptions) => {
     .forEach(path => {
       routes = appendRouter(path, routes, pages)
     })
-  const Router = require('vue-router').default
   vue.use(Router)
   return new Router({
     routes,
