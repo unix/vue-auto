@@ -28,7 +28,6 @@ const getModules = (context, isPage) => context
     )
   })
 
-const components = !notFoundComponents ? getModules(componentsContext) : {}
 const pages = !notFoundPages ? getModules(pagesContext, true) : {}
 
 const install = (vue, options = {
@@ -39,6 +38,7 @@ const install = (vue, options = {
 }) => {
   options = util.setDefaultOption(options)
   util.setPrefix(options.prefix)
+  const components = !notFoundComponents ? getModules(componentsContext) : {}
 
   !notFoundComponents && component.createComponents(vue, components)
   !notFoundPages && component.createComponents(vue, pages)
@@ -54,7 +54,5 @@ const withRouters = router.makeWithRouters(pages)
 
 export {
   install,
-  components,
-  pages,
   withRouters,
 }
