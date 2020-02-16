@@ -102,6 +102,7 @@ Here are the `options` of `install(vue, options)`
 | autoRouter | `boolean` | auto inject router | `true` | - |
 | mode | `string` | h5 router mode | `history` | - |
 | base | `string` | router base | `process.env.BASE_URL` | - |
+| routes | `array` | extra routes: [RouteConfig](https://router.vuejs.org/zh/api/#routes) | `[]` | - |
 
 <br/>
 
