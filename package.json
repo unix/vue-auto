@@ -1,6 +1,6 @@
 {
   "name": "vue-auto",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "main": "src/index.js",
   "repository": "git@github.com:unix/vue-auto.git",
   "author": "unix <lambdas.dev@gmail.com>",
@@ -19,7 +19,12 @@
     "extends": [
       "lambdas/vue"
     ],
-    "rules": { "max-params": ["error", 5] },
+    "rules": {
+      "max-params": [
+        "error",
+        5
+      ]
+    },
     "ignore": [
       "examples"
     ]
