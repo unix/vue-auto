@@ -19,33 +19,42 @@
 
 ### Automation
 
-  - auto component:
-  
+  - Auto import `Component`:
+
+    You created a component file:
     ```
     // hello.vue
     <template> <p>hello</p> <template>
-    
-    // anywhere
+    ```
+    It can be used anywhere:
+    ```
     <auto-hello>
     ```
-  
-  - auto router, 
-    create router `/home`:
+
+<br/>
+
+  - Auto set `router`
+
+    File `pages/home.vue` == router `/home`:
     ```
     // pages/home.vue
     <template> <p>home</p> <template>
     ```
-    
-    create router `/posts/20`:
+
+    File `pages/posts/[id].vue` == router `/posts/20`:
     ```
     // pages/posts/[id].vue
-    <template> <p>{{ $route.params.id }}</p> <template>
+    <template> 
+      <p>This is a dynamic route, {{ $route.params.id }}</p> 
+    <template>
     ```
   It's easy.
 
+<br/>
+
 ### Usage
 
-1. install: `npm i vue-auto` or `yarn add vue-auto`.
+1. install: `npm i vue-auto`.
 
 2. create `components/` and `pages/` folder.
 
@@ -70,17 +79,17 @@
 
 > Please complete the init in step [Usage](#Usage) first.
 
-  - Components: 
-    - use `my-{filename}` in anywhere. (e.g. use `my-menu` if the file is named `menu`)
-    - prefixe can be modified in `options.prefix`, default is `auto` 
-    - any component can refer to each other
+  - Components:
+    - use `my-{filename}` in anywhere.
+    - prefixe can be modified in `options.prefix`, default is `auto`.
+    - any component can refer to each other.
 
   - Routers:
-    - files under folder `pages` will automatically be routed
-    - get router `/about` when you create file `/pages/about.vue`
-    - get router `/posts/:id` when you create file `/posts/[id].vue`
-    - get router `/pages/first` when you create file `/posts/first.vue` (static routes take precedence over dynamic routes)
-  
+    - files under folder `pages` will automatically be routed.
+    - get router `/about` == create file `/pages/about.vue`.
+    - get router `/posts/:id` == create file `/posts/[id].vue`.
+    - get router `/pages/first` == create file `/posts/first.vue`. (static routes take precedence over dynamic routes)
+
 <br/>
 
 ### Options
