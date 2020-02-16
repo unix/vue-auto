@@ -19,6 +19,7 @@
     "extends": [
       "lambdas/vue"
     ],
+    "rules": { "max-params": ["error", 5] },
     "ignore": [
       "examples"
     ]

@@ -25,8 +25,8 @@ const withRouters = routers => routers
     return r
   })
 
-export const createRouter = (vue, pages, pageContexts, routerOptions) => {
-  let routes = []
+export const createRouter = (vue, pages, pageContexts, routerOptions, extraRoutes) => {
+  let routes = extraRoutes || []
   pageContexts
     .sort(a => util.dynamicRouterReg.test(a) ? 1 : -1)
     .forEach(path => {

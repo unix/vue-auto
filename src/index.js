@@ -35,6 +35,7 @@ const install = (vue, options = {
   mode: 'history',
   base: process.env.BASE_URL,
   autoRouter: true,
+  routes: [],
 }) => {
   options = util.setDefaultOption(options)
   util.setPrefix(options.prefix)
@@ -44,10 +45,16 @@ const install = (vue, options = {
   !notFoundPages && component.createComponents(vue, pages)
 
   if (!options.autoRouter) return null
-  return router.createRouter(vue, pages, pagesContext.keys(), {
-    mode: options.mode,
-    base: options.base,
-  })
+  return router.createRouter(
+    vue,
+    pages,
+    pagesContext.keys(),
+    {
+      mode: options.mode,
+      base: options.base,
+    },
+    options.routes,
+  )
 }
 
 const withRouters = router.makeWithRouters(pages)

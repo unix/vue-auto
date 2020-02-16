@@ -15,6 +15,11 @@ export const setDefaultOption = options => {
   if (options.autoRouter === undefined) {
     options.autoRouter = true
   }
+
+  if (options.routes && !Array.isArray(options.routes)) {
+    throw new Error('vue-auto: options.routes must be an array.')
+  }
+  options.routes = options.routes || []
   return options
 }
 
